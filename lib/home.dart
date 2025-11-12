@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:get/route_manager.dart';
 import 'package:getxsample/countcontroller.dart';
 import 'package:getxsample/lightcontroller.dart';
+import 'package:getxsample/views/viewproductscreen.dart';
+import 'package:getxsample/views/viewuserscreen.dart';
 
 class Home extends StatelessWidget {
   const Home({super.key});
@@ -95,6 +96,14 @@ class Home extends StatelessWidget {
             ElevatedButton(
               onPressed: () => l.bulbswitch(),
               child: Text("Switch"),
+            ),
+            ElevatedButton(
+              onPressed: () => Get.to(Viewproductscreen()),
+              child: Text("my Products"),
+            ),
+            ElevatedButton(
+              onPressed: () => Get.to(Viewuserscreen()),
+              child: Text("user"),
             ),
           ],
         ),
